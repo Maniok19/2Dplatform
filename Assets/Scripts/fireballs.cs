@@ -26,10 +26,8 @@ public class fireballs : MonoBehaviour
         RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, distance, whatIsSolid);
         if (hitInfo.collider != null)
         {
-            Debug.Log("detect something");
             if (hitInfo.collider.CompareTag("Player"))
             {
-                Debug.Log("player must take dmg");
                 hitInfo.collider.GetComponent<PlayerStats>().PlayerTakeDamage(damage);
             }
             DestroyProjectile();

@@ -7,10 +7,11 @@ using UnityEngine.SceneManagement;
 public class PlayerStats : MonoBehaviour
 {
     public int Playerhealth;
+    Rigidbody2D rb;
    
     void Update()
     {
-
+         //Player life
         if (Playerhealth <= 0)
         {
             Destroy(gameObject);

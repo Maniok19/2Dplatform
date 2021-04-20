@@ -26,7 +26,6 @@ public class projectiles : MonoBehaviour
         {
             if (hitInfo.collider.CompareTag("Enemy"))
             {
-                Debug.Log("enemy must take dmg");
                 hitInfo.collider.GetComponent<enemy1>().TakeDamage(damage);
             }
             DestroyProjectile();
@@ -34,7 +33,7 @@ public class projectiles : MonoBehaviour
 
         
     }
-    void DestroyProjectile()
+    public void DestroyProjectile()
     {
         Instantiate(destroyEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
